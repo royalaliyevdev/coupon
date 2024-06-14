@@ -55,7 +55,7 @@
 
 <div class="sidebar">
     <a href="./register.php">Register</a>
-    <a href="create_coupon.php">Kupon Yarat</a>
+    <a href="addCoupon.php">Kupon Yarat</a>
     <a href="create_user.php">Kullanıcı Yarat</a>
 </div>
 

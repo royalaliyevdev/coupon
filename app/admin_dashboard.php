@@ -4,6 +4,8 @@ if ($_SESSION['role'] != 'admin') {
     header("Location: login.php");
     exit();
 }
-$title = "Admin";
-include('../layout/admin.php');
+
+$title = "Admin Paneli";
+$content = "../../layout/index_content.php";
+include('../../layout/layout.php');
 ?>

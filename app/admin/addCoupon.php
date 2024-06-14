@@ -1,5 +1,6 @@
 <?php
 $title = "Ana Sayfa";
-$content = "../../layout/index_content.php";
-include('../../layout/layout.php');
+include('../../layout/admin.php');
+$content = "../layout/index_content.php";
 ?>
+
