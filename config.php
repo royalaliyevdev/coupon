@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "coupon";
+$dbname = "coupon_ticket";
 
 // Veritabanı bağlantısını oluştur
 $conn = new mysqli($servername, $username, $password, $dbname);
