@@ -53,8 +53,8 @@ if ($result->num_rows > 0) {
         </tr>
     </table>
     <div class="mt-4">
-        <h3>Coupon Image</h3>
-        <img src="generated_coupons/coupon_<?php echo $coupon['coupon_number']; ?>.webp" alt="Coupon Image">
+        <h3>Download PDF</h3>
+        <a href="generated_coupons/coupon_<?php echo $coupon['coupon_number']; ?>.pdf" class="btn btn-primary">Download PDF</a>
     </div>
 </div>
 </body>

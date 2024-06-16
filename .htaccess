@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^coupon/([0-9]+)$ coupon.php?coupon_number=$1 [L]
