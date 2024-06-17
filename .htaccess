@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^coupon/([0-9]+)$ coupon.php?coupon_number=$1 [L]
+RewriteRule ^coupon/([a-zA-Z0-9]+)$ coupon.php?token=$1 [L,QSA]

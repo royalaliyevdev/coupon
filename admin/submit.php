@@ -34,7 +34,7 @@ for ($i = 0; $i < $number_of_coupons; $i++) {
         $conn->query("UPDATE coupon_numbers SET last_coupon_number = $coupon_number WHERE id = 1");
 
         // Generate QR code with the encrypted coupon number
-        $url = "https://yourdomain.com/coupon/$encrypted_number";
+        $url = "https://192.168.31.55/coupon/coupon/$encrypted_number";
         $qr_file = '../qrcodes/' . $coupon_number . '.png';
         QRcode::png($url, $qr_file);
 
