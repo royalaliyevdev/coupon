@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
     function onScanSuccess(qrCodeMessage) {
         const urlParts = qrCodeMessage.split('/');
-        const couponNumber = urlParts[urlParts.length - 1];
+        const token = urlParts[urlParts.length - 1];
 
-        if (couponNumber) {
+        if (token) {
             document.getElementById('qr-reader-results').innerText = "QR Code Detected: " + qrCodeMessage;
-            document.getElementById('coupon_number').value = couponNumber;
 
             // Fetch coupon details using AJAX
-            fetch(`fetch_coupon.php?coupon_number=${couponNumber}`)
+            fetch(`../manager/fetch_coupon.php?token=${token}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
+                        document.getElementById('coupon_number').value = data.coupon.coupon_number;
                         document.getElementById('store').value = data.coupon.store_id || '';
                         document.getElementById('name').value = data.coupon.name || '';
                         document.getElementById('phone').value = data.coupon.phone || '';

@@ -1,12 +1,12 @@
 <?php
 require '../config.php';
 require '../phpqrcode/qrlib.php';
-require '../vendor/autoload.php';  // Including Composer's autoload file
+require '../vendor/autoload.php';
 
 use setasign\Fpdi\Fpdi;
 use setasign\Fpdi\PdfReader\PdfReader;
 
-// Get data from the form
+$prefix = "lumusoft";
 $number_of_coupons = $_POST['number_of_coupons'];
 $store_id = isset($_POST['store_id']) && !empty($_POST['store_id']) ? $_POST['store_id'] : 'NULL';
 $name = !empty($_POST['name']) ? "'" . $conn->real_escape_string($_POST['name']) . "'" : 'NULL';
@@ -22,16 +22,19 @@ for ($i = 0; $i < $number_of_coupons; $i++) {
     $row = $result->fetch_assoc();
     $coupon_number = $row['last_coupon_number'] + 1;
 
+    // Encrypt the coupon number
+    $encrypted_number = md5($prefix . $coupon_number);
+
     // Insert data into the database
-    $sql = "INSERT INTO coupons (coupon_number, store_id, name, phone, car_brand, fuel_type, status, used)
-    VALUES ('$coupon_number', $store_id, $name, $phone, $car_brand, $fuel_type, '$status', '$used')";
+    $sql = "INSERT INTO coupons (coupon_number, store_id, name, phone, car_brand, fuel_type, status, used, encrypted_number)
+            VALUES ('$coupon_number', $store_id, $name, $phone, $car_brand, $fuel_type, '$status', '$used', '$encrypted_number')";
 
     if ($conn->query($sql) === TRUE) {
         // Update the coupon number
         $conn->query("UPDATE coupon_numbers SET last_coupon_number = $coupon_number WHERE id = 1");
 
-        // Generate QR code
-        $url = "https://192.168.31.55/coupon/$coupon_number";  // Directly append the coupon number to the domain
+        // Generate QR code with the encrypted coupon number
+        $url = "https://yourdomain.com/coupon/$encrypted_number";
         $qr_file = '../qrcodes/' . $coupon_number . '.png';
         QRcode::png($url, $qr_file);
 

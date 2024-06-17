@@ -9,12 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $car_brand = $_POST['car_brand'];
     $fuel_type = $_POST['fuel_type'];
 
-    $sql = "UPDATE coupons SET store_id = '$store_id', name = '$name', phone = '$phone', car_brand = '$car_brand', fuel_type = '$fuel_type', status = 'active' WHERE coupon_number = '$coupon_number'";
-
+    $sql = "UPDATE coupons SET store_id='$store_id', name='$name', phone='$phone', car_brand='$car_brand', fuel_type='$fuel_type', status='active' WHERE coupon_number='$coupon_number'";
     if ($conn->query($sql) === TRUE) {
         echo "Coupon updated successfully";
     } else {
-        echo "Error updating record: " . $conn->error;
+        echo "Error updating coupon: " . $conn->error;
     }
 
     $conn->close();
