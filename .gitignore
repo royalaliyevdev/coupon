@@ -1,0 +1,7 @@
+.idea
+/vendor
+/uploads
+/generated_coupons
+/qrcodes
+/phpqrcode
+!.gitignore

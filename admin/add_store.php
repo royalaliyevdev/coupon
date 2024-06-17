@@ -1,3 +1,20 @@
+<?php
+session_start();
+require '../config.php';
+
+// Mağaza ekleme işlemi
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $store_name = $_POST['store_name'];
+    $sql = "INSERT INTO stores (name) VALUES (?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $store_name);
+    $stmt->execute();
+    $stmt->close();
+    header("Location: list_stores.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +26,12 @@
 <body>
 <div class="container mt-5">
     <h2>Add Store</h2>
-    <form action="submit_store.php" method="post">
+    <form method="post" action="">
         <div class="form-group">
-            <input type="text" class="form-control" id="name" name="name" placeholder="Store Name" required>
+            <input type="text" class="form-control" name="store_name" placeholder="Store Name" required>
         </div>
         <button type="submit" class="btn btn-primary">Add Store</button>
     </form>
-    <div class="mt-4">
-        <a href="list_stores.php" class="btn btn-secondary">View Stores</a>
-    </div>
 </div>
 </body>
 </html>

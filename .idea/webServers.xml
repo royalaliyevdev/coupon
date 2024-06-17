@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ae8731f3-e55c-4b1d-9d72-5877d521179f" name="Portdepo" url="http://95.217.229.90">
+        <fileTransfer rootFolder="/www/portdepo.ru" host="95.217.229.90" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
