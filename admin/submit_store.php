@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+include '../resources/views/admin/header.php';
 
 $name = $_POST['name'];
 
@@ -14,4 +14,4 @@ $conn->close();
 header("Location: add_store.php");
 exit;
 ?>
-<?php
+<?php include '../resources/views/admin/footer.php'; ?>

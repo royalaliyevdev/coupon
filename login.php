@@ -1,11 +1,10 @@
 <?php
-session_start();
 require 'config.php';
+require 'session_manager.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $user_type = $_POST['user_type']; // 'admin', 'manager', 'store'
 
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $conn->prepare($sql);
@@ -17,15 +16,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_type'] = $user_type;
+            $_SESSION['user_type'] = $user['user_type'];
             $_SESSION['store_id'] = $user['store_id'];
 
-            if ($user_type == 'admin') {
-                header("Location: admin/index.php");
-            } elseif ($user_type == 'manager') {
-                header("Location: manager/index.php");
-            } elseif ($user_type == 'store') {
-                header("Location: store/index.php");
+            // Kullanıcı türüne göre yönlendirme
+            switch ($user['user_type']) {
+                case 'admin':
+                    header("Location: admin/index.php");
+                    break;
+                case 'manager':
+                    header("Location: manager/index.php");
+                    break;
+                case 'store':
+                    header("Location: store/index.php");
+                    break;
+                default:
+                    header("Location: login.php");
+                    break;
             }
             exit();
         } else {
@@ -55,13 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Password" required>
-        </div>
-        <div class="form-group">
-            <select class="form-control" name="user_type" required>
-                <option value="admin">Admin</option>
-                <option value="manager">Manager</option>
-                <option value="store">Store</option>
-            </select>
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>

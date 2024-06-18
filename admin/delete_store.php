@@ -1,5 +1,4 @@
-<?php
-require '../config.php';
+<?php include '../resources/views/admin/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $store_id = $_POST['store_id'];

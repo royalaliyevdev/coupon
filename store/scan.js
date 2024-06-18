@@ -34,14 +34,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function onScanFailure(error) {
-        console.warn(`QR error = ${error}`);
-        // Hata mesajlarını bir süre durdurmak için zamanlayıcı kullanma
-        setTimeout(startQrScanner, 2000); // 2 saniye sonra tekrar dene
+
     }
 
     function startQrScanner() {
         const html5QrCode = new Html5Qrcode("qr-reader");
-        const config = { fps: 10, qrbox: 250 };
+        const config = { fps: 10, qrbox: 250, aspectRatio: 1.0 };
 
         Html5Qrcode.getCameras().then(devices => {
             if (devices && devices.length) {

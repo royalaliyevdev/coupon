@@ -1,5 +1,4 @@
-<?php
-require '../config.php';
+<?php include '../resources/views/admin/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['coupon_ids'])) {
     $coupon_ids = $_POST['coupon_ids'];

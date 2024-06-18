@@ -1,3 +1,6 @@
+<?php
+include '../resources/views/admin/header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,3 +46,4 @@
 </div>
 </body>
 </html>
+<?php include '../resources/views/admin/footer.php'; ?>

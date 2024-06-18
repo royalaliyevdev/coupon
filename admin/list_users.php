@@ -1,26 +1,10 @@
 <?php
-session_start();
-require '../config.php';
-
-// Admin girişi kontrolü
-if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
-    header("Location: ../login.php");
-    exit();
-}
+include '../resources/views/admin/header.php';
 
 // Kullanıcıları listeleme
 $sql = "SELECT u.id, u.username, u.user_type, s.name as store_name FROM users u LEFT JOIN stores s ON u.store_id = s.id";
 $result = $conn->query($sql);
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>List Users</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
 <body>
 <div class="container mt-5">
     <h2>List of Users</h2>
@@ -53,7 +37,4 @@ $result = $conn->query($sql);
 </div>
 </body>
 </html>
-
-<?php
-$conn->close();
-?>
+<?php include '../resources/views/admin/footer.php'; ?>

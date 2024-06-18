@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+include '../resources/views/admin/header.php';
 
 if (isset($_GET['coupon_number'])) {
     $coupon_number = intval($_GET['coupon_number']);
@@ -86,3 +86,4 @@ if (isset($_GET['coupon_number'])) {
 </div>
 </body>
 </html>
+<?php include '../resources/views/admin/footer.php'; ?>

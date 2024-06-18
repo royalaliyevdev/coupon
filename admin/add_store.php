@@ -1,6 +1,4 @@
-<?php
-session_start();
-require '../config.php';
+<?php include '../resources/views/admin/header.php';
 
 // Mağaza ekleme işlemi
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -35,3 +33,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 </body>
 </html>
+<?php include '../resources/views/admin/footer.php'; ?>

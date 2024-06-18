@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+include '../resources/views/admin/header.php';
 require '../phpqrcode/qrlib.php';
 require '../vendor/autoload.php';
 

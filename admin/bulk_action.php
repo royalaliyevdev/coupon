@@ -5,10 +5,12 @@ require '../vendor/autoload.php';
 use setasign\Fpdi\Fpdi;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $action = $_POST['action'];
-    $coupon_numbers = isset($_POST['coupon_numbers']) ? $_POST['coupon_numbers'] : [];
+    ob_start(); // Output buffering başlat
 
-    if ($action === 'delete' && !empty($coupon_numbers)) {
+    $action = $_POST['action'];
+    $coupon_numbers = $_POST['coupon_numbers'];
+
+    if ($action === 'delete') {
         $coupon_numbers_str = implode(",", array_map('intval', $coupon_numbers));
         $sql = "DELETE FROM coupons WHERE coupon_number IN ($coupon_numbers_str)";
         if ($conn->query($sql) === TRUE) {
@@ -16,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             echo "Error deleting coupons: " . $conn->error;
         }
-    } elseif ($action === 'download' && !empty($coupon_numbers)) {
+    } elseif ($action === 'download') {
         $pdf = new Fpdi();
         $coupons_per_page = 3;
         $coupon_count = 0;
@@ -43,9 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
+        ob_end_clean(); // Output buffering'i temizle ve kapat
+
         $pdf->Output('D', 'coupons.pdf');
         exit;
     }
+
+    ob_end_flush(); // Output buffering'i sonlandır ve tamponu boşalt
     header("Location: list.php");
     exit;
 }

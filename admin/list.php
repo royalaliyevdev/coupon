@@ -1,3 +1,17 @@
+<?php
+include '../resources/views/admin/header.php';
+require '../vendor/autoload.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    include 'bulk_action.php';
+    exit;
+}
+
+// Kuponları veritabanından çek
+$sql = "SELECT * FROM coupons";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,6 +121,4 @@
         }
     }
 </script>
-
-</body>
-</html>
+<?php include '../resources/views/admin/footer.php'; ?>

@@ -1,12 +1,5 @@
 <?php
-session_start();
-require '../config.php';
-
-// Admin girişi kontrolü
-if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
-    header("Location: ../login.php");
-    exit();
-}
+include '../resources/views/admin/header.php';
 
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];

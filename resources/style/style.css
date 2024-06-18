@@ -1,0 +1,28 @@
+/* Genel stiller */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .text-muted {
+    margin-right: 10px;
+}
+
+.footer img {
+    height: 20px;
+}

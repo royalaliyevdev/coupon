@@ -1,5 +1,4 @@
-<?php
-require '../config.php';
+<?php include '../resources/views/admin/header.php';
 require '../vendor/autoload.php';  // Including Composer's autoload file
 
 use setasign\Fpdi\Fpdi;

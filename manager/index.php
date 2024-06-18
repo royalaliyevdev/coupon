@@ -1,3 +1,4 @@
+<?php include '../resources/views/manager/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,3 +53,4 @@
 <script src="scan.js"></script>
 </body>
 </html>
+<?php include '../resources/views/manager/footer.php'; ?>

@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+include '../resources/views/admin/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $coupon_number = intval($_POST['coupon_number']);

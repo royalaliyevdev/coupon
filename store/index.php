@@ -1,16 +1,4 @@
-<?php
-session_start();
-
-// Mağaza girişi kontrolü
-if (!isset($_SESSION['store_id'])) {
-    header("Location: ../login.php");
-    exit();
-}
-
-require '../config.php';
-$store_id = $_SESSION['store_id'];
-?>
-
+<?php include '../resources/views/store/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,3 +32,4 @@ $store_id = $_SESSION['store_id'];
 <script src="scan.js"></script>
 </body>
 </html>
+<?php include '../resources/views/store/footer.php';
