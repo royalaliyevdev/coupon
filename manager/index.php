@@ -20,11 +20,14 @@
                 <select class="form-control" id="store" name="store_id" required>
                     <option value="">Select Store</option>
                     <?php
+                    session_start(); // Oturumu başlat
                     require '../config.php';
+                    $selected_store = isset($_SESSION['selected_store']) ? $_SESSION['selected_store'] : '';
                     $sql = "SELECT id, name FROM stores";
                     $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc()) {
-                        echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
+                        $selected = ($row['id'] == $selected_store) ? 'selected' : '';
+                        echo "<option value='" . $row['id'] . "' $selected>" . $row['name'] . "</option>";
                     }
                     ?>
                 </select>
