@@ -18,39 +18,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $coupon_image_path = '../generated_coupons/coupon_' . $coupon_number . '.jpg';
 
         if (file_exists($coupon_image_path)) {
-            // Görüntüyü yükle
-            $image = imagecreatefromjpeg($coupon_image_path);
+            // Ürün görüntüsünü yükle
+            $target_dir = "../uploads/";
+            $target_file = $target_dir . basename($_FILES["product_image"]["name"]);
 
-            // Gri overlay ekle
-            $overlay_color = imagecolorallocatealpha($image, 128, 128, 128, 50);
-            imagefilledrectangle($image, 0, 0, imagesx($image), imagesy($image), $overlay_color);
+            if (move_uploaded_file($_FILES["product_image"]["tmp_name"], $target_file)) {
+                // Resmi sıkıştır ve yeniden boyutlandır
+                compressImage($target_file, $target_file, 80);
 
-            // Kırmızı renkte "İstifadə olunub!" yazısını ekle
-            $stamp_text = "İstifadə olunub!";
-            $font_size = 50;
-            $font_color = imagecolorallocate($image, 255, 0, 0);
-            $font_path = '../resources/style/fonts/arial.ttf'; // Font dosyası yolu
-            $text_box = imagettfbbox($font_size, 0, $font_path, $stamp_text);
-            $text_width = $text_box[2] - $text_box[0];
-            $text_height = $text_box[7] - $text_box[1];
-            $x = (imagesx($image) / 2) - ($text_width / 2);
-            $y = (imagesy($image) / 2) - ($text_height / 2);
-            imagettftext($image, $font_size, 0, $x, $y, $font_color, $font_path, $stamp_text);
+                // Görüntüyü yükle
+                $image = imagecreatefromjpeg($coupon_image_path);
 
-            // Güncellenmiş görüntüyü kaydet
-            imagejpeg($image, $coupon_image_path, 100);
+                // Gri overlay ekle
+                $overlay_color = imagecolorallocatealpha($image, 128, 128, 128, 50);
+                imagefilledrectangle($image, 0, 0, imagesx($image), imagesy($image), $overlay_color);
 
-            // Belleği boşalt
-            imagedestroy($image);
+                // Kırmızı renkte "İstifadə olunub!" yazısını ekle
+                $stamp_text = "İstifadə olunub!";
+                $font_size = 50;
+                $font_color = imagecolorallocate($image, 255, 0, 0);
+                $font_path = '../resources/style/fonts/arial.ttf'; // Font dosyası yolu
+                $text_box = imagettfbbox($font_size, 0, $font_path, $stamp_text);
+                $text_width = $text_box[2] - $text_box[0];
+                $text_height = $text_box[7] - $text_box[1];
+                $x = (imagesx($image) / 2) - ($text_width / 2);
+                $y = (imagesy($image) / 2) - ($text_height / 2);
+                imagettftext($image, $font_size, 0, $x, $y, $font_color, $font_path, $stamp_text);
 
-            // Kuponun durumu ve kullanılmış bilgilerini güncelle
-            $sql_update = "UPDATE coupons SET used = 'yes' WHERE coupon_number = ?";
-            $stmt_update = $conn->prepare($sql_update);
-            $stmt_update->bind_param('i', $coupon_number);
-            if ($stmt_update->execute()) {
-                echo "Coupon marked as used and image updated successfully.";
+                // Güncellenmiş görüntüyü kaydet
+                imagejpeg($image, $coupon_image_path, 100);
+
+                // Belleği boşalt
+                imagedestroy($image);
+
+                // Kuponun durumu ve kullanılmış bilgilerini güncelle
+                $sql_update = "UPDATE coupons SET used = 'yes', product_image = ? WHERE coupon_number = ?";
+                $stmt_update = $conn->prepare($sql_update);
+                $stmt_update->bind_param('si', $target_file, $coupon_number);
+                if ($stmt_update->execute()) {
+                    echo "Coupon marked as used and image updated successfully.";
+                } else {
+                    echo "Error updating coupon status: " . $stmt_update->error;
+                }
             } else {
-                echo "Error updating coupon status: " . $stmt_update->error;
+                echo "Error uploading product image.";
             }
         } else {
             echo "Coupon image not found.";
@@ -63,4 +74,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $conn->close();
 header("Location: index.php");
 exit();
+
+function compressImage($source, $destination, $quality) {
+    $info = getimagesize($source);
+    if ($info['mime'] == 'image/jpeg') {
+        $image = imagecreatefromjpeg($source);
+    } elseif ($info['mime'] == 'image/gif') {
+        $image = imagecreatefromgif($source);
+    } elseif ($info['mime'] == 'image/png') {
+        $image = imagecreatefrompng($source);
+    }
+
+    // Yeniden boyutlandırma
+    $width = imagesx($image);
+    $height = imagesy($image);
+    $new_width = $width;
+    $new_height = $height;
+
+    if ($width > 1000 || $height > 1000) {
+        $aspect_ratio = $width / $height;
+        if ($width > $height) {
+            $new_width = 1000;
+            $new_height = $new_width / $aspect_ratio;
+        } else {
+            $new_height = 1000;
+            $new_width = $new_height * $aspect_ratio;
+        }
+    }
+
+    $new_image = imagecreatetruecolor($new_width, $new_height);
+    imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+
+    // Resmi sıkıştırma
+    imagejpeg($new_image, $destination, $quality);
+    imagedestroy($image);
+    imagedestroy($new_image);
+}
 ?>

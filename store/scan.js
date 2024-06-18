@@ -12,7 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
-                        if (data.coupon.status === 'active' && data.coupon.store_id == storeId) {
+                        if (data.coupon.used === 'yes') {
+                            document.getElementById('qr-reader-results').innerHTML = `
+                                <div class="alert alert-danger" role="alert">
+                                    Bu kupon kullanılmış!
+                                </div>`;
+                            document.getElementById('couponForm').style.display = 'none';
+                        } else if (data.coupon.status === 'active' && data.coupon.store_id == storeId) {
                             document.getElementById('coupon_number').value = data.coupon.coupon_number;
                             document.getElementById('couponForm').style.display = 'block';
                         } else {
@@ -34,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function onScanFailure(error) {
-
+        console.warn(`QR error = ${error}`);
+        // Hata mesajlarını bir süre durdurmak için zamanlayıcı kullanma
+        setTimeout(startQrScanner, 2000); // 2 saniye sonra tekrar dene
     }
 
     function startQrScanner() {
