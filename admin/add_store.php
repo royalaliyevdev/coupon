@@ -1,4 +1,5 @@
-<?php include '../resources/views/admin/header.php';
+<?php
+include '../resources/views/admin/header.php';
 
 // Mağaza ekleme işlemi
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -13,24 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Add Store</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container mt-5">
+
     <h2>Add Store</h2>
     <form method="post" action="">
         <div class="form-group">
-            <input type="text" class="form-control" name="store_name" placeholder="Store Name" required>
+            <input type="text" class="form-control uponInput" name="store_name" placeholder="Store Name" required>
         </div>
-        <button type="submit" class="btn btn-primary">Add Store</button>
+        <button type="submit" class="btn btn-primary uponButton">Add Store</button>
     </form>
-</div>
-</body>
-</html>
 <?php include '../resources/views/admin/footer.php'; ?>

@@ -4,6 +4,7 @@ $store_id = $_SESSION['store_id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $coupon_number = $_POST['coupon_number'];
+    $price = $_POST['price']; // Fiyat bilgisi
 
     // Kuponun durumu ve mağaza id'si kontrolü
     $sql = "SELECT * FROM coupons WHERE coupon_number = ? AND store_id = ? AND status = 'active' AND used = 'no'";
@@ -19,8 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (file_exists($coupon_image_path)) {
             // Ürün görüntüsünü yükle
+            $original_file_name = $_FILES["product_image"]["name"];
+            $file_extension = pathinfo($original_file_name, PATHINFO_EXTENSION);
+            $new_file_name = 'coupon_' . date('YmdHis') . '.' . $file_extension;
             $target_dir = "../uploads/";
-            $target_file = $target_dir . basename($_FILES["product_image"]["name"]);
+            $target_file = $target_dir . $new_file_name;
 
             if (move_uploaded_file($_FILES["product_image"]["tmp_name"], $target_file)) {
                 // Resmi sıkıştır ve yeniden boyutlandır
@@ -52,9 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 imagedestroy($image);
 
                 // Kuponun durumu ve kullanılmış bilgilerini güncelle
-                $sql_update = "UPDATE coupons SET used = 'yes', product_image = ? WHERE coupon_number = ?";
+                $sql_update = "UPDATE coupons SET used = 'yes', product_image = ?, price = ? WHERE coupon_number = ?";
                 $stmt_update = $conn->prepare($sql_update);
-                $stmt_update->bind_param('si', $target_file, $coupon_number);
+                $stmt_update->bind_param('sdi', $target_file, $price, $coupon_number);
                 if ($stmt_update->execute()) {
                     echo "Coupon marked as used and image updated successfully.";
                 } else {

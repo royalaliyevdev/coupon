@@ -11,6 +11,9 @@ body {
 .footer {
     background-color: #000000;
     padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0 !important;
 }
 
 .footer .container {
@@ -25,4 +28,176 @@ body {
 
 .footer img {
     height: 20px;
+}
+
+.mobileDisplayBlock {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .mobileDisplayBlock {
+        display: block;
+    }
+}
+
+.navbar-vertical {
+    width: 250px;
+    background-color: #d0021b;
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding-top: 60px;
+    left: 0;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.navbar-vertical.open {
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 960px) {
+    .navbar-vertical {
+        transform: translateX(-250px);
+    }
+    .navbar-vertical.open {
+        transform: translateX(0);
+    }
+    .content {
+        margin-left: 0;
+    }
+    .hamburger-icon {
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 20px;
+        z-index: 1001;
+    }
+}
+
+.navbar-vertical a, .dropdown-btn {
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar-vertical a:hover, .dropdown-btn:hover {
+    background-color: #a30215;
+    color: white;
+}
+
+.navbar-vertical .logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.navbar-vertical .logo img {
+    width: 150px;
+}
+
+.navbar-vertical .dropdown-btn img {
+    width: 20px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.dropdown-container {
+    display: none;
+}
+
+.dropdown-container a {
+    padding-left: 60px !important;
+    font-size: 16px;
+}
+
+.dropdown-btn .svg-icon {
+    float: right;
+    padding-right: 8px;
+}
+
+.active .svg-icon {
+    transform: rotate(180deg);
+}
+
+/* Genel form elemanları için container */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-container div {
+    flex: 1;
+    margin: 10px;
+}
+
+.form-container div.full-width {
+    flex: 0 0 100%;
+}
+
+.form-container div.half-width {
+    flex: 0 0 48%;
+}
+
+form {
+    margin: 0 auto;
+}
+
+.uponInput {
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.uponButton {
+    background-color: #d0021b !important;
+    color: white !important;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #a30215;
+}
+
+@media screen and (min-width: 960px) {
+
+    .AdmingeneralContainer{
+        position: absolute;  left: 250px;
+    }
+}
+
+.topnavbar{
+    position: fixed; width: calc(100% - 250px);
+    left: 250px;
+    top: 0;
+}
+
+@media screen and (max-width: 960px) {
+
+    .topnavbar{
+        left: 0px;
+    }
+
 }

@@ -56,20 +56,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if (isset($error)) { echo "<div class='alert alert-danger'>$error</div>"; } ?>
     <form method="post" action="">
         <div class="form-group">
-            <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo $user['username']; ?>" required>
+            <input type="text" class="form-control uponInput" name="username" placeholder="Username" value="<?php echo $user['username']; ?>" required>
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password (leave blank to keep current password)">
+            <input type="password" class="form-control uponInput" name="password" placeholder="Password (leave blank to keep current password)">
         </div>
         <div class="form-group">
-            <select class="form-control" name="user_type" required>
+            <select class="form-control uponInput" name="user_type" required>
                 <option value="admin" <?php if ($user['user_type'] == 'admin') echo 'selected'; ?>>Admin</option>
                 <option value="manager" <?php if ($user['user_type'] == 'manager') echo 'selected'; ?>>Manager</option>
                 <option value="store" <?php if ($user['user_type'] == 'store') echo 'selected'; ?>>Store</option>
             </select>
         </div>
         <div class="form-group">
-            <select class="form-control" name="store_id">
+            <select class="form-control uponInput" name="store_id">
                 <option value="">No Store (for Admin or Manager)</option>
                 <?php
                 $sql = "SELECT id, name FROM stores";
@@ -81,12 +81,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Update User</button>
+        <button type="submit" class="btn uponButton">Update User</button>
     </form>
 </div>
 </body>
 </html>
 
 <?php
+include '../resources/views/admin/footer.php';
 $conn->close();
 ?>

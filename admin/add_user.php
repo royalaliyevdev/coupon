@@ -1,4 +1,5 @@
-<?php include '../resources/views/admin/header.php';
+<?php
+include '../resources/views/admin/header.php';
 
 // Kullanıcı ekleme işlemi
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -17,26 +18,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Add User</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container mt-5">
     <h2>Add User</h2>
     <form method="post" action="">
         <div class="form-group">
-            <input type="text" class="form-control" name="username" placeholder="Username" required>
+            <input type="text" class="form-control uponInput" name="username" placeholder="Username" required>
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required>
+            <input type="password" class="form-control uponInput" name="password" placeholder="Password" required>
         </div>
         <div class="form-group">
-            <select class="form-control" name="user_type" required>
+            <select class="form-control uponInput" name="user_type" required>
                 <option value="admin">Admin</option>
                 <option value="manager">Manager</option>
                 <option value="store">Store</option>
@@ -54,9 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Add User</button>
+        <button type="submit" class="btn   uponButton">Add User</button>
     </form>
-</div>
-</body>
-</html>
+
 <?php include '../resources/views/admin/footer.php'; ?>

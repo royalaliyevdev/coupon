@@ -10,9 +10,157 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/dompdf/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/endroid/qr-code" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/intervention/gif" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/setasign/fpdf" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/setasign/fpdi" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/coupon/vendor/dompdf/php-svg-lib" />
+      <path value="$PROJECT_DIR$/coupon/vendor/endroid/qr-code" />
+      <path value="$PROJECT_DIR$/coupon/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/coupon/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/coupon/vendor/intervention/gif" />
+      <path value="$PROJECT_DIR$/coupon/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/coupon/vendor/setasign/fpdf" />
+      <path value="$PROJECT_DIR$/coupon/vendor/composer" />
+      <path value="$PROJECT_DIR$/coupon/vendor/setasign/fpdi" />
+      <path value="$PROJECT_DIR$/coupon/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/coupon/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/coupon/vendor/dompdf/php-font-lib" />
+      <path value="$PROJECT_DIR$/coupon/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/league/config" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/league/flysystem-local" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/composer" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/demo/couponProject/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/demo/userc/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/demo/couponProject/phpunit.xml" custom_loader_path="$PROJECT_DIR$/demo/couponProject/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />

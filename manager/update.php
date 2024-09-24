@@ -8,14 +8,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = trim($_POST['phone']); // Telefon numarasını trimle
     $car_brand = $_POST['car_brand'];
     $fuel_type = $_POST['fuel_type'];
+    $activation_date = date('d.m.Y'); // Aktive edilme tarihi
 
     // Name alanını Latin karakterlere dönüştür
     $name_latin = convertToLatin($name);
 
     // Kuponu güncelle ve aktiv hale getir
-    $sql = "UPDATE coupons SET store_id = ?, name = ?, phone = ?, car_brand = ?, fuel_type = ?, status = 'active' WHERE coupon_number = ?";
+    $sql = "UPDATE coupons SET store_id = ?, name = ?, phone = ?, car_brand = ?, fuel_type = ?, status = 'active', activation_date = ? WHERE coupon_number = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param('issssi', $store_id, $name, $phone, $car_brand, $fuel_type, $coupon_number);
+    $stmt->bind_param('isssssi', $store_id, $name, $phone, $car_brand, $fuel_type, $activation_date, $coupon_number);
 
     if ($stmt->execute()) {
         // Kupon başarıyla güncellenirse, SMS gönder

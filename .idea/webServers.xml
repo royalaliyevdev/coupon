@@ -9,6 +9,34 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="db6ad937-e727-43b5-8094-f3a84017c686" name="Oilshop.az" url="http://95.217.229.90">
+        <fileTransfer rootFolder="/www/oilshop.az" host="95.217.229.90" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="065ce69f-11ea-4236-b985-83687057ed89" name="Bardahl Coupon" url="http://95.217.229.90">
+        <fileTransfer rootFolder="/www/bardahloil.az" host="95.217.229.90" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="eb6cee86-75fc-47fd-bbcc-4f2d46ee226b" name="Upon.az" url="http://95.217.229.90">
+        <fileTransfer host="95.217.229.90" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="354c6f5a-ac6e-4e6c-b351-97368f2db627" name="Compusale" url="http://95.217.229.90">
+        <fileTransfer host="95.217.229.90" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

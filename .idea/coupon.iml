@@ -1,7 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/demo/couponProject/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/couponProject/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/couponProject/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/couponProject/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/couponProject/tests/Feature" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/couponProject/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/oilshop.az/admin/view/template/extension/soconfig/class/scssphp/src" isTestSource="false" packagePrefix="ScssPhp\ScssPhp\" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/oilshop.az/admin/view/template/extension/soconfig/class/scssphp/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/oilshop.az/admin/view/template/extension/soconfig/class/scssphp/tests" isTestSource="true" packagePrefix="ScssPhp\ScssPhp\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/oilshop.az/system/library" isTestSource="false" packagePrefix="PHPMailer" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/oilshop.az/system/library" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/oilshop.az/system/library/SpreadsheetReader" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/oilshop.az/system/library/so_social" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/opencart/system/library" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Oil Finder/src" isTestSource="false" packagePrefix="Acme\" />
+      <sourceFolder url="file://$MODULE_DIR$/Oil Finder/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/storage/modification/system/library" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/userc/app" isTestSource="false" packagePrefix="App\" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bacon/bacon-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dasprid/enum" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dompdf/dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dompdf/php-font-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dompdf/php-svg-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/endroid/qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/intervention/gif" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/intervention/image" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/masterminds/html5" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sabberworm/php-css-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/setasign/fpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/setasign/fpdi" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/bacon/bacon-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/dasprid/enum" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/dompdf/dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/dompdf/php-font-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/dompdf/php-svg-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/endroid/qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/intervention/gif" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/intervention/image" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/masterminds/html5" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/sabberworm/php-css-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/setasign/fpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/coupon/vendor/setasign/fpdi" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/carbonphp/carbon-doctrine-types" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/fruitcake/php-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/guzzlehttp/uri-template" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/laravel/pint" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/laravel/prompts" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/league/flysystem-local" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/nunomaduro/termwind" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/spatie/laravel-permission" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-php83" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/polyfill-uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/uid" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/couponProject/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/demo/userc/vendor/composer" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

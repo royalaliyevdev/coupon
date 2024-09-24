@@ -1,4 +1,5 @@
-<?php include '../resources/views/admin/header.php';
+<?php
+include '../resources/views/admin/header.php';
 
 // Admin girişi kontrolü
 if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {

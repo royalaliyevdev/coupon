@@ -2,7 +2,35 @@
 <project version="4">
   <component name="PublishConfigData" serverName="Portdepo" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
+      <paths name="Bardahl Coupon">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Compusale">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Oilshop.az">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Portdepo">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Upon.az">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

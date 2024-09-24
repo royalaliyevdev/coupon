@@ -1,9 +1,9 @@
 </div>
-<footer class="footer mt-auto py-3">
+<footer class="footer mb-0 mt-5  py-3" style="position: fixed">
     <div class="container text-center">
         <span class="text-muted">Sistem
             <a href="https://lumusoft.com/az" target="_blank">
-                <img src="https://lumusoft.com/assets/images/logo-lg.svg" alt="Lumusoft Logo" style="height: 20px;">
+                <img src="https://lumusoft.com/assets/images/logo-lg.svg" alt="Lumusoft Logo" style="height: 14px;">
             </a>
             tərəfindən yaradıldı.
         </span>
@@ -13,6 +13,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+<script src="/manager/scan.js"></script>
 <script>
     $(document).ready(function(){
         // Telefon numarası maskesi
